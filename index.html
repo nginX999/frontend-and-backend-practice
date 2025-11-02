@@ -4,69 +4,141 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/styles.css">
-        <title>Семестровая работа</title>
+        <title>Главная - Портфолио</title>
     </head>
     <body>
-        <div class="page-container">
+        <div class="page">
 
             <header class="header">
-                <h1>Хэдер</h1>
+                <h1 class="header__title">Моё портфолио</h1>
             </header>
 
             <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--active"><a class="nav__link" href="index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="pages/news.html">Новости</a></li>
+                    <li class="nav__item"><a class="nav__link" href="pages/goods.html">Товары</a></li>
+                    <li class="nav__item"><a class="nav__link" href="pages/contacts.html">Контакты</a></li>
+                    <li class="nav__item nav__item--theme"><button id="theme-toggle" class="theme-btn" aria-label="Переключить тему">
+                        <span class="icon sun-icon">☀️</span>
+                        <span class="icon moon-icon">🌙</span>
+                </button></li>
                 </ul>
             </nav>
 
-            <main class="content">
-                <article class="profile-header">
-                    <h1 class="profile-title">Информация об авторе</h1>
-                    <img class="profile-photo" src="images/01vr1ZHopGCYbX9N3gDcMiU9aH0uhNBzZfTgl-pVvO3KqxB39IEha3iIAdrmscN-xnoX4ErPshq8rbRD-Dz-7z_W.jpg" alt="Фото автора" width="200" height="250">
-                    <h2 class="profile-name">Дзигоев Давид Георгиевич</h2>
-                    <p class="profile-group">ЭФБО-05-24</p>
-                </article>
+            <main class="main">
 
-                <section class="about-me">
-                    <p>Обо мне: Я родился в Владикавказе в 2005-м. Ходил в садик.
+                <section class="profile">
+                    <div class="profile__card">
+                        <img class="profile__photo" src="images/01vr1ZHopGCYbX9N3gDcMiU9aH0uhNBzZfTgl-pVvO3KqxB39IEha3iIAdrmscN-xnoX4ErPshq8rbRD-Dz-7z_W.jpg" alt="Фото автора" width="200" height="250">
+                        <div class="profile__info">
+                            <h2 class="profile__name">Дзигоев Давид Георгиевич</h2>
+                            <p class="profile__group">ЭФБО-05-24</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="about">
+                    <h2 class="about__title">Обо мне</h2>
+                    <div class="about__content">
+                        <p>Я родился в Владикавказе в 2005-м. Ходил в садик.
                         Потом школа, форма, драки, клей. Так я становился сильней.</p>
-                </section>
-                
-                <section class="skills-container">
-                    <h2>Мои навыки</h2>
-                    <div class="skills-grid">
-                        <div class="skill-tag">Навык 1</div>
-                        <div class="skill-tag">Навык 2</div>
-                        <div class="skill-tag">Навык 3</div>
-                        <div class="skill-tag">Навык 4</div>
                     </div>
                 </section>
                 
-                <section class="experience-section">
-                    <h2 class="section-title">Мой опыт работы:</h2>
-                    <div class="experience-grid">
-                        <article class="experience-card">
-                            <h3 class="experience-title">Опыт 1</h3>
-                            <p class="experience-desc">Работал во "Вкусно-и-точка" на проекте "Стикермания"</p>
-                        </article>
-                        <article class="experience-card">
-                            <h3 class="experience-title">Опыт 2</h3>
-                            <p class="experience-desc">Работал в "Экомобайл".</p>
-                        </article>
-                        <article class="experience-card">
-                            <h3 class="experience-title">Опыт 3</h3>
-                            <p class="experience-desc">Работал на улице. Раздавал листовки.</p>
-                        </article>
+                <section class="skills">
+                    <h2 class="skills__title">Мои навыки</h2>
+                    <div class="skills__list">
+                        <div class="skill skill--html">
+                            <span class="skill__name">HTML</span>
+                        </div>
+                        <div class="skill skill--css">
+                            <span class="skill__name">CSS</span>
+                        </div>
+                        <div class="skill skill--js">
+                            <span class="skill__name">JavaScript</span>
+                        </div>
                     </div>
                 </section>
+                
+                <section class="projects">
+                    <h2 class="projects__title">Проекты</h2>
+                    <div class="projects__grid">
+                        <div class="project-card">
+                            <h3 class="project-card__title">Личный сайт</h3>
+                            <p class="project-card__desc">Сайт-портфолио на HTML и CSS</p>
+                        </div>
+                        <div class="project-card">
+                            <h3 class="project-card__title">Todo приложение</h3>
+                            <p class="project-card__desc">Простое приложение для задач</p>
+                        </div>
+                    </div>
+                </section>
+            
+                <script>
+                    // Константы для работы с темой
+                    const Theme = {
+                        LIGHT: 'light',
+                        DARK: 'dark'
+                    };
+
+                    // Элементы управления
+                    const themeToggle = document.getElementById('theme-toggle');
+                    
+                    // Функции для работы с темой
+                    function getCurrentTheme() {
+                        return document.body.classList.contains('dark-theme') ? Theme.DARK : Theme.LIGHT;
+                    }
+
+                    function setTheme(theme) {
+                        if (theme === Theme.DARK) {
+                            document.body.classList.add('dark-theme');
+                        } else {
+                            document.body.classList.remove('dark-theme');
+                        }
+                    }
+
+                    function saveTheme(theme) {
+                        localStorage.setItem('theme', theme);
+                    }
+
+                    function toggleTheme() {
+                        const currentTheme = getCurrentTheme();
+                        const newTheme = currentTheme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
+                        
+                        setTheme(newTheme);
+                        saveTheme(newTheme);
+                    }
+
+                    // Инициализация темы при загрузке
+                    function initTheme() {
+                        const savedTheme = localStorage.getItem('theme');
+                        
+                        if (savedTheme === Theme.DARK) {
+                            setTheme(Theme.DARK);
+                        } else {
+                            setTheme(Theme.LIGHT);
+                        }
+                    }
+
+                    // Обработчики событий
+                    function setupEventListeners() {
+                        themeToggle.addEventListener('click', toggleTheme);
+                    }
+
+                    // Запуск приложения
+                    function init() {
+                        initTheme();
+                        setupEventListeners();
+                    }
+
+                    // Запускаем когда DOM загружен
+                    document.addEventListener('DOMContentLoaded', init);
+                </script>
             </main>
             <footer class="footer">
-                <p>Футер</p>
-            </div>
+                <p class="footer__text">&copy; 2024 Мой сайт</p>
+            </footer>
         </div>
     </body>
 </html>
