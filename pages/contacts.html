@@ -209,8 +209,8 @@
                         <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
                     </div>
                     <div class="modal-actions">
-                        <!-- Кнопка отмены с автоматическим закрытием через form method="dialog" -->
-                        <button type="submit" class="btn btn-secondary">Отмена</button>
+                        <!-- Кнопка отмены с правильным типом button и обработчиком onclick -->
+                        <button type="button" class="btn btn-secondary" onclick="ModalManager.closeModal()">Отмена</button>
                         <!-- Кнопка отправки с обработкой через JavaScript -->
                         <button type="button" class="btn btn-primary" onclick="ModalManager.submitForm()">Отправить</button>
                     </div>
